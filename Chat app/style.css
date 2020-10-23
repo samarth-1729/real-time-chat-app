@@ -1,65 +1,112 @@
-body{
-    height: 100vh;
-    background-image: linear-gradient(white, rgb(13, 17, 223));
+/* Responsive design Media Queries */
+@media (max-width: 899px) {
+    #app-container {
+        width: 100%;
+        height: 100%;
+    }
+    #messageInp {
+        width: 75vw;
+    }
 }
 
-.logo{
-    display: block;
-    margin: auto;
-    width: 130px;
-    height: 70px;
+@media (min-width: 900px) {
+    #app-container {
+        width: 70%;
+        height: 90%;
+        border-radius: 1em;
+        box-shadow: 0 0 1em #7773;
+    }
+    header {
+        border-radius: 1em 1em 0 0;
+    }
+    #bottom-bar {
+        border-radius: 0 0 1em 1em;
+    }
+    #messageInp {
+        width: 55vw;
+    }
 }
 
-.container{
-    max-width: 955px;
-    background-image: linear-gradient( rgb(223, 13, 13), white);
-    margin: auto;
-    height: 80vh;
-    padding: 33px;
-    overflow-y: auto;
-    margin-bottom: 23px;
+/* Layout */
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #ebebeb;
 }
 
-.message{
-    background-color: blueviolet;
-    width: 24%;
-    padding: 10px;
-    margin: 17px 12px;
-    border: 2px solid black;
-    border-radius: 10px;
+#app-container {
+    background-color: #f8f8f8;
 }
 
-.left{
+header {
+    width: 100%;
+    height: 10%;
+    background-color: #ebebeb;
+}
+
+#messages-area {
+    width: 100%;
+    height: 78%;
+    overflow: auto;
+    padding: 1em 2em;
+}
+
+#bottom-bar {
+    width: 100%;
+    height: 12%;
+    background-color: #324e7b;
+}
+
+/* Text Input styles */
+
+#messageInp {
+    border: none;
+    outline: none;
+    height: 2.7em;
+    color: #ebebeb;
+    padding: 0 1.5em;
+    font-weight: 500;
+    border-radius: 1.5em;
+    background-color: #2d4469;
+}
+
+#messageInp::placeholder {
+    color: #86a6df;
+    font-weight: 500;
+}
+
+#send-button {
+    font-size: 2em;
+    color: #86a6df;
+}
+
+#send-button:hover {
+    color: #3a69b6;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+/* Chat Bubble styles */
+
+.message {
+    max-width: 75%;
+    margin-top: 1em;
+    color: #ebebeb;
+    border-radius: 3em;
+    padding: 0.8em 1.5em;
+}
+
+.left {
     float: left;
     clear: both;
-    background-color: blanchedalmond;
+    border-top-left-radius: 0;
+    background-color: #5068a9;
 }
 
-.right{
+.right {
     float: right;
     clear: both;
-    background-color: blue;
-    color: blanchedalmond;
-}
-
-#send-container{
-    display: block;
-    margin: auto;
-    text-align: center;
-    max-width: 984px;
-    width: 100%;
-}
-
-#messageInp{
-    width: 92%;
-    border: 2px solid black;
-    border-radius: 6px;
-    height: 34px;
-}
-
-.btn1{
-    cursor: pointer;
-    border: 2px solid black;
-    border-radius: 6px;
-    height: 34px;
+    border-top-right-radius: 0;
+    background-color: #86a6df;
 }
