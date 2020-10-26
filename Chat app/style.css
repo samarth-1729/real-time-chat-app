@@ -77,8 +77,11 @@ header {
 }
 
 #send-button {
+    border: 0;
+    outline: 0;
     font-size: 2em;
     color: #86a6df;
+    background-color: transparent;
 }
 
 #send-button:hover {

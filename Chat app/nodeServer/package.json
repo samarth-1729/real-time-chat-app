@@ -4,7 +4,7 @@
   "description": "this is node server for our real time chat app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "Samarth",
   "license": "ISC",

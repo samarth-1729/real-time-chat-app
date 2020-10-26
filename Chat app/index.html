@@ -33,7 +33,7 @@
     </header>
 
     <section id="messages-area">
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <div id="alert-message" class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Well done!</strong> You have been successfully connected.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -44,7 +44,7 @@
     <section id="bottom-bar" class="d-flex align-items-center justify-content-center">
       <form action="#" id="send-container" class="d-flex align-items-center justify-content-center">
         <input type="text" name="messageInp" id="messageInp" placeholder="Text a message...">
-        <span class="material-icons ml-4" id="send-button">send</span>
+        <button class="material-icons ml-3" type="submit" id="send-button">send</button>
       </form>
     </section>
   </div>
@@ -61,6 +61,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+  <!-- Alert fade out -->
+  <script>
+    setTimeout(() => { $('#alert-message').alert('close') }, 5000)
+  </script>
 </body>
 
 </html>
